@@ -1,1 +1,3 @@
-FROM ubunut:16.04
+FROM circleci/php:7.3
+FROM circleci/postgres:10
+LABEL maintainer="svikramjeet"
