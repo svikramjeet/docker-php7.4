@@ -4,7 +4,7 @@ FROM php:7.3-apache
 LABEL maintainer="svikramjeet"
 
 RUN  apt-get update \
-  && apt-get upgrade -y && \
+  && apt-get upgrade -y \
   && apt-get install -y git \
   && apt-get install -y sudo \
   && apt-get install -y wget
