@@ -1,3 +1,5 @@
+FROM circleci/postgres:10
+
 FROM php:7.3-apache
 LABEL maintainer="svikramjeet"
 
@@ -9,5 +11,3 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
-
-FROM circleci/postgres:10
