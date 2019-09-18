@@ -1,4 +1,4 @@
-FROM php:7.3-apache
+FROM circleci/php:7.3
 LABEL maintainer="svikramjeet"
 
 RUN  apt-get update \
