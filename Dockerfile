@@ -8,7 +8,8 @@ RUN  apt-get update \
   && apt-get install -y git \
   && apt-get install -y sudo \
   && apt-get install -y exif \
-  && apt-get install -y wget
+  && apt-get install -y wget \
+  && apt-get install -y libpng-dev libpq-dev
   
 RUN docker-php-ext-install gd mbstring pdo pdo_mysql pdo_pgsql
     
