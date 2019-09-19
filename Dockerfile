@@ -7,9 +7,10 @@ RUN  apt-get update \
   && apt-get upgrade -y \
   && apt-get install -y git \
   && apt-get install -y sudo \
-  && apt-get install -y gd exif \
-  && apt-get install -y pdo pdo_pgsql pgsql \
+  && apt-get install -y exif \
   && apt-get install -y wget
+  
+RUN docker-php-ext-install gd mbstring pdo pdo_mysql pdo_pgsql
     
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
