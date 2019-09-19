@@ -7,6 +7,8 @@ RUN  apt-get update \
   && apt-get upgrade -y \
   && apt-get install -y git \
   && apt-get install -y sudo \
+  && apt-get install -y gd exif \
+  && apt-get install -y pdo pdo_pgsql pgsql \
   && apt-get install -y wget
     
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
