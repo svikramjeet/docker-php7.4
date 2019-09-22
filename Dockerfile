@@ -11,6 +11,8 @@ RUN  apt-get update \
   && apt-get install -y wget \
   && apt-get install -y libpng-dev libpq-dev
   
+RUN  apt-get install libzip-dev -y
+
 RUN docker-php-ext-install gd mbstring pdo pdo_mysql pdo_pgsql pgsql exif zip
 
     
