@@ -1,4 +1,4 @@
-FROM circleci/postgres:10
+FROM postgres:10
 
 FROM php:7.3-apache
 LABEL maintainer="svikramjeet"
