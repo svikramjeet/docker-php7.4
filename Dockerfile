@@ -13,7 +13,7 @@ RUN  apt-get update \
   
 RUN  apt-get install libzip-dev -y
 
-RUN docker-php-ext-install gd mbstring pdo pdo_mysql pdo_pgsql pgsql exif zip redis
+RUN docker-php-ext-install gd mbstring pdo pdo_mysql pdo_pgsql pgsql exif zip php7-redis
 
     
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
