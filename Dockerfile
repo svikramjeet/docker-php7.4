@@ -1,6 +1,7 @@
 FROM postgres:10
 
 FROM php:7.3-apache
+FROM php:7.3-cli
 LABEL maintainer="svikramjeet"
 
 RUN  apt-get update \
@@ -13,7 +14,11 @@ RUN  apt-get update \
   
 RUN  apt-get install libzip-dev -y
 
-RUN docker-php-ext-install gd mbstring pdo pdo_mysql pdo_pgsql pgsql exif zip php7-redis
+
+RUN pecl install redis-5.1.1 \
+  && docker-php-ext-enable redis
+
+RUN docker-php-ext-install gd mbstring pdo pdo_mysql pdo_pgsql pgsql exif zip
 
     
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
