@@ -1,7 +1,5 @@
-FROM postgres:10
-
 FROM php:7.3-apache
-FROM php:7.3-cli
+
 LABEL maintainer="svikramjeet"
 
 RUN  apt-get update \
