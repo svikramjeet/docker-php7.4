@@ -1,2 +1,2 @@
-# Docker php7.3
-This docker image is for PHP7.3 with dependencies
+# Docker php7.4
+This docker image is for PHP7.4 with dependencies
