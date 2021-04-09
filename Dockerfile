@@ -21,7 +21,7 @@ RUN  apt-get install libzip-dev -y
 RUN pecl install redis-5.1.1 \
   && docker-php-ext-enable redis
 
-RUN docker-php-ext-install gd pdo pdo_mysql pdo_pgsql pgsql exif zip
+RUN docker-php-ext-install gd pdo pdo_mysql pdo_pgsql pgsql exif zip sockets bcmath
     
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
