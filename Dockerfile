@@ -23,6 +23,7 @@ RUN pecl install redis-5.1.1 \
 
 RUN docker-php-ext-install gd pdo pdo_mysql pdo_pgsql pgsql exif zip sockets bcmath
     
+RUN php -v
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
